@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+.box {
+	padding: 0;
+	margin: 200px 0px 0px 0px;
+	width: 200px;
+	height: 200px;
+	background: black;
+}
+
