@@ -39,6 +39,12 @@ body {
 
 @media(max-width: 600px){
 	.body {
-		overflow-y: inherit;
+		-webkit-touch-callout: none; /* Disable callouts */
+    -webkit-user-select: none; /* Disable selection */
+    -khtml-user-select: none; /* Disable selection */
+    -moz-user-select: none; /* Disable selection */
+    -ms-user-select: none; /* Disable selection */
+    user-select: none; /* Disable selection */
+    overflow: auto; /* Re-enable scrolling */
 	}
 }
