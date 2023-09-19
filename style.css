@@ -30,9 +30,18 @@ body {
 	margin: 0;	
 }
 
-.body {
-	max-height: 100vh;
+
+.main {
+  max-height: 100vh;
+  overflow: hidden;
 }
+
+.xuy-sosi {
+  height: 500px;
+  background: yellow;
+  width: 100%;
+}
+
 
 
 
