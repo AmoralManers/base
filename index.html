@@ -3,25 +3,59 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>fuck</title>
+	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
-	<main>
-	<div class="container">
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-	</div>
-	</main>
+ <main class="main">
+
+ 	
+ 		<ul class="background">	
+
+ 			<li class="white main_img">
+
+ 			</li>
+ 			<li class="black main_img">
+
+ 			</li>
+		</ul>
+ </main>
 </body>
 </html>
 
 <script>
-	window.addEventListener('load', function() {
-  setTimeout(function(){
-    window.scrollTo(0, 1);
-  }, 0);
+
+
+const lightElements = document.querySelectorAll('.light');
+const darkElements = document.querySelectorAll('.dark');
+const white = document.querySelector('.white');
+const black = document.querySelector('.black');
+
+
+
+lightElements.forEach(lightElement => {
+  lightElement.addEventListener('mouseover', () => {
+      white.classList.add('zoom');
+  });
+});
+
+darkElements.forEach(darkElement => {
+  darkElement.addEventListener('mouseover', () => {
+      black.classList.add('zoom');
+  });
+});
+
+// Для удаления класса при уходе мыши с элемента можно использовать следующий код:
+
+lightElements.forEach(lightElement => {
+  lightElement.addEventListener('mouseout', () => {
+      white.classList.remove('zoom');
+  });
+});
+
+darkElements.forEach(darkElement => {
+  darkElement.addEventListener('mouseout', () => {
+      black.classList.remove('zoom');
+  });
 });
 </script>
