@@ -1,18 +1,19 @@
+
 *, 
 *::after,
 *::before {
-	box-sizing: border-box;
-	touch-action: manipulation;
+  box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Imperial+Script&family=Thasadith:ital@1&display=swap');
 
 @font-face {
-	font-family: 'Imperial Script';
-	font-style: normal;
-	font-weight: 400;
-	src: url('ImperialScript-Regular.woff'), format('woff')
+  font-family: 'Imperial Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('ImperialScript-Regular.woff'), format('woff')
 }
 
 
@@ -22,31 +23,21 @@ html, body {
 }
 
 body {
-	background: black;	
+  background: black;  
 }
 
 
 body {
-	margin: 0;	
+  margin: 0;  
 }
 
-
-.main {
-  max-height: 100vh;
-  overflow: hidden;
-}
-
-.xuy-sosi {
-  height: 500px;
-  background: yellow;
-  width: 100%;
-}
 
 
 
 
 .main {
-	display: flex;
+  overflow-x: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -64,18 +55,78 @@ body {
   overflow: hidden;
 }
 
+
+.xuy-sosi {
+  background: #000;
+}
+
+
+.main-background {
+
+  background-image: url('images/bckgorundblood.png');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  transition: all 3.5s ease;
+}
+
+
+.img-grif-bers,
+.img-berserk {
+  position: absolute;
+  transition: opacity 2.5s ease-in-out;
+}
+
+.xuy-pidr {
+  width: 364px;
+  height: 190px;
+  position: relative;
+}
+
+
+
+.img-grif-bers {
+  left: -20px;
+  position: absolute;
+  bottom: 0;
+
+}
+
+.img-berserk {
+      max-width: 360px;
+    left: -20px;
+  bottom: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+
+.hover-red {
+  cursor: pointer;
+/*  filter: grayscale(100%)  brightness(700%);*/
+  filter: brightness(0) invert(1);
+  transition: filter 3.5s ease;
+}
+
+
 /*.images img {
-	width: 60vh;
+  width: 60vh;
 }
 
 .images img:first-child {
-	transform: translateX(2%);
+  transform: translateX(2%);
   position: absolute;
   top: -2%;
 }
 
 .images img:last-child {
-	    transform: translateX(0.5%);
+      transform: translateX(0.5%);
   position: absolute;
   bottom: -2%;
   object-fit: cover;
@@ -84,8 +135,8 @@ body {
 
 
 a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 
@@ -99,7 +150,7 @@ a {
 
 
 .background  li {
-	width: 50vw;
+  width: 50vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -107,7 +158,7 @@ a {
 
 
 .background  li:after {
-	position: absolute;
+  position: absolute;
     content: "";
     display: block;
     width: 100%;
@@ -147,38 +198,52 @@ a {
 
 
 .container {
-	position: relative;
-	height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 
 
 
 .main {
-	color: #FFF;
-	font-family: 'Imperial Script';
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+  color: #FFF;
+  font-family: 'Imperial Script';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
 
 }
 
+.sneg {
+  position: absolute;
+  left: 24%;
+    top: 12%;  
+}
 
-/*$$#@$#@$#IUJTSDGFFJFSDIKSISFUJISFSDUIJFHNSDUIJFDUSDFUIFSDIUFJSDIUFDJSUISFDFSDUFIUJIFSDIFUJFUIJFDSU*/
+main .sneg__inner {
+  font-size: 4vh;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+}
 
-/*.img__main {
-   background-image: url('images/groip6.png');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   width: 100%;
-   height: 500px; 
-}*/
+
+
 
 @media(max-width: 600px) {
 
+  html {
+  overflow: -moz-scrollbars-none;
+   /* overflow: scroll;*/
+  }
+
+
+  .body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+/*  .background li {
+    height: 120vh;
+  }*/
 }
-
-
 
