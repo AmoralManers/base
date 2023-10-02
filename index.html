@@ -5,10 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body class="body">
  <main class="main">
+      <div class="images">
+    <div class="container">
+      <div class="sneg">
+        <a href="" class="sneg__inner">Sneg</a>
+      </div> 
+      <img src="images/groip6.png" alt="" class="main">
+    </div>
 
+      
+    </div>
  	
  		<ul class="background">	
 
@@ -20,10 +30,81 @@
  			</li>
 		</ul>
  </main>
+
+ <section class="xuy-sosi">
+   <div class="main-background hover-red" id ="backgorund">
+      <div class="xuy-pidr" id="imgContainer">
+      <img src="images/ANIMEGUTS AND GRIFFIT.png" class="img-grif-bers" alt="" id="topImg">
+     <img src="images/BERSERMOVEMENT 1.png" alt="" class="img-berserk" id="bottomImg">
+      </div>
+
+   </div>
+ </section>
 </body>
 </html>
 
 <script>
+
+$('.xuy-sosi').scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    var hiddenBlock = $('.sneg__inner');
+    
+    if (scrollTop > 0) {
+      console.log('123')
+    } else {
+     hiddenBlock.removeClass('hidden');
+    }
+});
+
+
+
+const imgContainer = document.getElementById('imgContainer');
+const topImg = document.getElementById('topImg');
+const bottomImg = document.getElementById('bottomImg');
+console.log(backgorund)
+const image = document.getElementById('backgorund');
+
+imgContainer.addEventListener('mouseenter', () => {
+   image.classList.remove('hover-red');
+ 
+});
+
+imgContainer.addEventListener('mouseleave', () => {
+   image.classList.add('hover-red');
+});
+
+
+imgContainer.addEventListener('mouseover', () => {
+  topImg.style.opacity = '0';
+  bottomImg.style.opacity = '1';
+});
+
+
+imgContainer.addEventListener('mouseout', () => {
+  topImg.style.opacity = '1';
+  bottomImg.style.opacity = '0';
+});
+
+
+
+
+
+// 
+
+// imgContainer.addEventListener('mouseover', () => {
+//  
+// });
+
+// imgContainer.addEventListener('mouseout', () => {
+//   const intervalId = setInterval(() => {
+//     currentOpacity += 0.05;
+//     if (currentOpacity >= 1) {
+//       clearInterval(intervalId);
+//     }
+//     backgorund.style.filter = brightness(${currentOpacity});
+//   }, 50);
+// });
+
 
 
 const lightElements = document.querySelectorAll('.light');
